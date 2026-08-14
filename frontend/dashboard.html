@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - To-Do App</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <h2>My To-Do</h2>
+
+            <div>
+                <span id="userName"></span>
+
+                <button id="logoutBtn" class="logout-btn">
+                    Logout
+                </button>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+                <h1 id="welcomeMessage">
+                    Welcome!
+                </h1>
+
+                <p>
+                    Manage your tasks and stay organized.
+                </p>
+            </div>
+
+            <button
+                id="addTaskBtn"
+                class="btn primary"
+            >
+                + Add Task
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+  <div class="stats">
+
+    <div class="stat-card">
+
+        <h3>Total</h3>
+
+        <p id="totalTasks">0</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Pending</h3>
+
+        <p id="pendingTasks">0</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Completed</h3>
+
+        <p id="completedTasks">0</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Overdue</h3>
+
+        <p id="overdueTasks">0</p>
+
+    </div>
+
+</div>
+
+        <!-- Tasks -->
+
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+
+                <h2>My Tasks</h2>
+
+                <div class="task-controls">
+
+                    <input
+                        type="text"
+                        id="searchTasks"
+                        placeholder="Search tasks..."
+                    >
+
+                    <select id="taskFilter">
+
+                        <option value="all">
+                            All Tasks
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="General">
+                            General
+                        </option>
+
+                        <option value="School">
+                            School
+                        </option>
+
+                        <option value="Work">
+                            Work
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div id="taskList">
+
+                <p class="loading">
+                    Loading tasks...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Add Task Modal -->
+
+    <div id="taskModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+                    Add Task
+                </h2>
+
+                <button id="closeModal">
+                    &times;
+                </button>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <input
+                    type="hidden"
+                    id="taskId"
+                >
+
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter task title"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        placeholder="Enter task description"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="taskCategory">
+                            Category
+                        </label>
+
+                        <select id="taskCategory">
+
+                            <option value="General">
+                                General
+                            </option>
+
+                            <option value="School">
+                                School
+                            </option>
+
+                            <option value="Work">
+                                Work
+                            </option>
+
+                            <option value="Personal">
+                                Personal
+                            </option>
+
+                            <option value="Shopping">
+                                Shopping
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="taskDueDate">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="taskDueDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary full-width"
+                >
+                    Save Task
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="./js/api.js"></script>
+    <script src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
