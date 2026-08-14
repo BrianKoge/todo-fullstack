@@ -1,39 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do App</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>My To-Do | Organize Your Life</title>
+
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
 
-    <div class="landing-container">
+    <!-- Navigation -->
+    <nav class="navbar">
 
-        <div class="landing-content">
+        <div class="nav-container">
 
-            <h1>My To-Do App</h1>
+            <h2 class="logo">My To-Do</h2>
 
-            <p>
-                Organize your tasks, manage your time,
-                and get things done.
-            </p>
-
-            <div class="landing-buttons">
-                <a href="./login.html" class="btn primary">
+            <div class="nav-links">
+                <a href="./login.html" class="nav-login">
                     Login
                 </a>
 
-                <a href="./register.html" class="btn secondary">
-                    Create Account
+                <a href="./register.html" class="btn primary nav-register">
+                    Get Started
                 </a>
             </div>
 
         </div>
 
-    </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-badge">
+                        ✓ Simple &amp; Powerful Task Management
+                    </span>
+
+                    <h1>
+                        Organize your life.
+                        <span>Get things done.</span>
+                    </h1>
+
+                    <p>
+                        Manage your daily tasks, stay organized, and
+                        keep track of what matters most — all in one
+                        simple and beautiful to-do app.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="./register.html" class="btn primary">
+                            Get Started
+                        </a>
+
+                        <a href="./login.html" class="btn secondary">
+                            Login
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Task Preview -->
+                <div class="hero-preview">
+
+                    <div class="preview-card">
+
+                        <div class="preview-header">
+
+                            <div>
+                                <span class="preview-label">
+                                    MY TASKS
+                                </span>
+
+                                <h3>
+                                    Today's Tasks
+                                </h3>
+                            </div>
+
+                            <span class="preview-count">
+                                4
+                            </span>
+
+                        </div>
+
+
+                        <div class="preview-task completed">
+
+                            <span class="check">
+                                ✓
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Complete assignment
+                                </strong>
+
+                                <small>
+                                    School
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-task">
+
+                            <span class="check">
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Study Java
+                                </strong>
+
+                                <small>
+                                    School · High Priority
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-task">
+
+                            <span class="check">
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Go shopping
+                                </strong>
+
+                                <small>
+                                    Shopping
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="preview-task">
+
+                            <span class="check">
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Work on project
+                                </strong>
+
+                                <small>
+                                    Work
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features">
+
+            <div class="section-heading">
+
+                <span class="hero-badge">
+                    FEATURES
+                </span>
+
+                <h2>
+                    Everything you need to stay organized
+                </h2>
+
+                <p>
+                    Simple tools to help you manage your tasks
+                    effectively.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Task Management
+                    </h3>
+
+                    <p>
+                        Create, edit, complete and delete tasks
+                        easily from your dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ★
+                    </div>
+
+                    <h3>
+                        Priorities
+                    </h3>
+
+                    <p>
+                        Set low, medium or high priorities so you
+                        know what needs your attention first.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        #
+                    </div>
+
+                    <h3>
+                        Categories
+                    </h3>
+
+                    <p>
+                        Organize your tasks using categories such
+                        as School, Work and Personal.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        Search &amp; Filter
+                    </h3>
+
+                    <p>
+                        Quickly find tasks using search and
+                        filtering options.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 My To-Do. Stay organized. Get things done.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
