@@ -64,6 +64,17 @@ const categoryFilter =
 // Store tasks
 let tasks = [];
 
+function openTaskModal() {
+    taskModal.style.display = "flex";
+    document.body.classList.add("modal-open");
+    setTimeout(() => document.getElementById("taskTitle").focus(), 0);
+}
+
+function closeTaskModal() {
+    taskModal.style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+
 
 // ==============================
 // LOAD TASKS
@@ -170,7 +181,8 @@ function displayTasks() {
 
         taskList.innerHTML =
             `<p class="empty-state">
-                No tasks found.
+                <strong>No tasks found</strong>
+                Try changing your search or filters, or add a new task.
              </p>`;
 
         return;
@@ -329,7 +341,7 @@ document.getElementById("addTaskBtn")
         document.getElementById("modalTitle").textContent =
             "Add Task";
 
-        taskModal.style.display = "flex";
+        openTaskModal();
     });
 
 
@@ -340,7 +352,7 @@ document.getElementById("addTaskBtn")
 document.getElementById("closeModal")
     .addEventListener("click", () => {
 
-        taskModal.style.display = "none";
+        closeTaskModal();
 
     });
 
@@ -403,7 +415,7 @@ taskForm.addEventListener("submit", async (event) => {
         }
 
 
-        taskModal.style.display = "none";
+        closeTaskModal();
 
         await loadTasks();
 
@@ -453,8 +465,18 @@ function editTask(id) {
         "Edit Task";
 
 
-    taskModal.style.display = "flex";
+    openTaskModal();
 }
+
+taskModal.addEventListener("click", (event) => {
+    if (event.target === taskModal) closeTaskModal();
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && taskModal.style.display === "flex") {
+        closeTaskModal();
+    }
+});
 
 
 // ==============================

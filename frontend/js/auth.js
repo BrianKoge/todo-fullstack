@@ -34,6 +34,7 @@ if (registerForm) {
 
             message.textContent =
                 "Passwords do not match.";
+            message.classList.remove("is-success");
 
             return;
         }
@@ -57,6 +58,7 @@ if (registerForm) {
 
             message.textContent =
                 data.message;
+            message.classList.add("is-success");
 
 
             // Go to login page
@@ -72,6 +74,7 @@ if (registerForm) {
 
             message.textContent =
                 error.message;
+            message.classList.remove("is-success");
 
         }
 
@@ -138,6 +141,7 @@ if (loginForm) {
 
             message.textContent =
                 "Login successful!";
+            message.classList.add("is-success");
 
 
             // Open dashboard
@@ -153,6 +157,7 @@ if (loginForm) {
 
             message.textContent =
                 error.message;
+            message.classList.remove("is-success");
 
         }
 

@@ -22,7 +22,7 @@
             <div>
                 <span id="userName"></span>
 
-                <button id="logoutBtn" class="logout-btn">
+                <button id="logoutBtn" class="logout-btn" type="button">
                     Logout
                 </button>
             </div>
@@ -50,6 +50,7 @@
             <button
                 id="addTaskBtn"
                 class="btn primary"
+                type="button"
             >
                 + Add Task
             </button>
@@ -112,9 +113,10 @@
                         type="text"
                         id="searchTasks"
                         placeholder="Search tasks..."
+                        aria-label="Search tasks"
                     >
 
-                    <select id="taskFilter">
+                    <select id="taskFilter" aria-label="Filter by status">
 
                         <option value="all">
                             All Tasks
@@ -130,7 +132,7 @@
 
                     </select>
 
-                    <select id="categoryFilter">
+                    <select id="categoryFilter" aria-label="Filter by category">
 
                         <option value="all">
                             All Categories
@@ -182,7 +184,7 @@
 
     <!-- Add Task Modal -->
 
-    <div id="taskModal" class="modal">
+    <div id="taskModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
 
         <div class="modal-content">
 
@@ -192,7 +194,7 @@
                     Add Task
                 </h2>
 
-                <button id="closeModal">
+                <button id="closeModal" type="button" aria-label="Close task form">
                     &times;
                 </button>
 
